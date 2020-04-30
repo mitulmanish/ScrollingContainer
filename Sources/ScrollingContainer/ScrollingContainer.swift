@@ -79,7 +79,7 @@ open class ScrollingContainer: UIViewController {
         [
         (#selector(keyboardWillShow(_:)),UIResponder.keyboardWillShowNotification),
         (#selector(keyboardDidShow(_:)), UIResponder.keyboardDidShowNotification),
-        (#selector(keyboardWillHide(_:), UIResponder.keyboardWillHideNotification),
+        (#selector(keyboardWillHide(_:)), UIResponder.keyboardWillHideNotification),
         (#selector(keyboardDidHide(_:)), UIResponder.keyboardDidHideNotification)
         ].forEach { selector, notificationName in
             self.addObserver(selector: selector, name: notificationName)
