@@ -13,7 +13,10 @@ open class ScrollingContainer: UIViewController {
     }
     
     required public init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        contentView = UIView()
+        keyboardLayoutGuide = KeyboardLayoutGuide()
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        super.init(coder: coder)
     }
     
     override open func viewDidLoad() {
